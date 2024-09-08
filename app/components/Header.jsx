@@ -3,8 +3,54 @@ import profilePic from "../Assets/ProfilePic.png";
 import Image from 'next/image';
 
 const Header = () => {
+  const NavigateSection = (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    const sectionId = e.target.getAttribute('href'); // Get the target section's ID
+    const section = document.querySelector(sectionId); // Find the section element by its ID
+    section.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the section
+    console.log(sectionId)
+  };
     return (
       <>
+      <nav className='nav '>
+      <div id="logo">
+        <span className="span">{"<"}</span> <h2>Gaurav</h2>{" "}
+        <span className="span"> {"/>"}</span>
+      </div>
+      <ul className='font-semibold text-[13px] sm:font-bold md:text-[18px] overflow-hidden '>
+        <li>
+          <a href="#about" onClick={NavigateSection}>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#skills" onClick={NavigateSection}>
+            Skills
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio" onClick={NavigateSection}>
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a href="#contact" onClick={NavigateSection}>
+            Contact
+          </a>
+        </li>
+        <li id="resume-link-1">
+          <a
+            className="nav-link resume"
+            id="resume-link-1"
+            href={"#"}
+            // onClick={handleClick}
+            download="Gaurav_Raj_Resume"
+          >
+            Resume
+          </a>
+        </li>
+      </ul>
+      </nav>
         <header
             className="h-[260px] sm:h-[250px] md:h-[300px] bg-[#333a4d] text-white py-3 px-4 sm:px-6 flex items-center justify-between"
             style={{

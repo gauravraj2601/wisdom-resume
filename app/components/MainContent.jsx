@@ -19,10 +19,10 @@ const MainContent = () => {
         <Skills />
       </div>
       <Hobbies />
-      <ContactInfo />
       <Portfolio />
-      <References />
+      <ContactInfo />
       <ContactForm />
+      <References />
     </main>
   );
 };

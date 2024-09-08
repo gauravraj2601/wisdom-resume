@@ -1,6 +1,6 @@
 
 // components/Footer.jsx
-const Footer = () => {
+const Footer = ({handleGeneratePDF}) => {
     return (
       <footer className="bg-primary text-primary-foreground py-6 px-4 md:px-6 flex items-center justify-between">
         <div>
@@ -21,6 +21,8 @@ const Footer = () => {
             <a href="#" className="hover:underline">Terms of Service</a>
           </div>
         </div>
+        <button onClick={handleGeneratePDF} >        Download Resume as PDF
+        </button>
       </footer>
     );
   };

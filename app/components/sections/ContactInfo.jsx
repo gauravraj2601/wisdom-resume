@@ -1,10 +1,13 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { FiPhone, FiMail, FiLinkedin } from 'react-icons/fi'; // Importing icons from react-icons
 import 'flowbite'; // For tooltips
 
 const ContactInfo = () => {
   return (
-    <section className="mb-12">
+    <ScrollAnimation animateIn="rubberBand" animateOnce={true} >
+
+            <section id='contact' className="mb-12">
       <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
       <div className="bg-white shadow-md p-6 rounded-lg">
         <ul className="space-y-4">
@@ -61,6 +64,7 @@ const ContactInfo = () => {
         </ul>
       </div>
     </section>
+              </ScrollAnimation>
   );
 };
 
