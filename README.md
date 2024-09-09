@@ -1,4 +1,32 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Resume | Wisdom |  Internship Assignment
+- **Deployed Link**: https://wisdom-resume.vercel.app/ 
+- Explore Gaurav Raj's professional journey as a Software Developer specializing in React, Tailwind CSS, and Full Stack Web Development. View detailed sections on skills, projects, and additional achievements. Download the full resume for more insights on Gaurav's expertise in building innovative digital solutions.
+![Screenshot_20240909_094751](https://github.com/user-attachments/assets/99b3d1c2-3998-4a98-bb6c-9abfa440fe33)
+## Sections
+### Header
+- **Introduction**: Get an overview of Gaurav Raj's professional identity, including contact information and a brief introduction.
+
+### Education
+- **Detailed Course/Stream Pop-up Modal**: On hover and click over the course or stream (e.g. "Full Stack Web Development" or "Bachelor of Commerce"), a modal will appear with detailed information about the course.
+
+- **Institution Map Modal**: On hover and click over the institution name (e.g., the name of the college or school), a map modal will appear, displaying the address and location of the institution.
+
+### Skills
+- **Skills**: Highlight Gaurav's technical skills and areas of expertise, showcasing proficiency in React, Tailwind CSS, and other relevant technologies.
+
+### Portfoli
+- **Project Highlights**: A showcase of significant projects I have worked on, including details of the technology used, the problem solved, and the outcomes achieved.
+
+### Contact
+- **Contact Details**: The contact section includes all relevant contact information, such as email, phone number, and LinkedIn profile.
+- **Contact Form**: An integrated contact form allows HR professionals to send inquiries directly.
+  - This form includes: Name, Email, Message
+- **Advanced Form Validation**:
+   - **Custom Validators**: Includes validation rules for required fields, email format, and message length.
+  - Real-Time Feedback: Provides immediate feedback to users as they fill out the form, indicating any errors or successful validation.
+
+
 
 ## Getting Started
 
@@ -29,8 +57,4 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
