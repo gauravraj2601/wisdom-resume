@@ -23,7 +23,7 @@ const ContactInfo = () => {
             <li className="flex items-center gap-4">
               <FiMail className="w-6 h-6 text-red-600" />
               <Tooltip content="Click to send an email" placement="top" arrow={false} animation="duration-300" trigger="hover" className="tooltip-custom" >
-                <span className="text-gray-700 text-md sm:text-2xl font-medium  ">
+                <span className="text-gray-700 text-md sm:text-lg lg:text-2xl font-medium  ">
                   Email: 
                   <a href="mailto:gauravraj2601@gmail.com" className="text-blue-500 underline ml-2">
                     gauravraj2601@gmail.com

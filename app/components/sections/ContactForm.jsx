@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AiOutlineSend } from "react-icons/ai"; // Import Send icon
 import emailjs from "emailjs-com";
 const ContactForm = () => {
   // Form state
@@ -15,10 +16,9 @@ const ContactForm = () => {
     message: "",
   });
 
-    // Success/Error state for form submission
-    const [statusMessage, setStatusMessage] = useState("");
-    const [loading, setLoading] = useState(false);
-
+  // Success/Error state for form submission
+  const [statusMessage, setStatusMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // Real-time validation for each field
   const validateField = (name, value) => {
@@ -77,7 +77,7 @@ const ContactForm = () => {
     setStatusMessage("");
     // If form is valid, submit the form
     if (isFormValid()) {
-      setLoading(true); 
+      setLoading(true);
 
       emailjs
         .send(
@@ -100,21 +100,22 @@ const ContactForm = () => {
             setLoading(false);
           }
         );
-      } else {
+    } else {
       console.log("Form is not valid.");
     }
-    
   };
 
   return (
-  
     <section className=" bg-[rgb(0,0,0,0.3)] w-[300px] md:w-[490px] m-auto  mt-2 p-3 rounded-[15px]">
       <h2 className="text-2xl text-white font-bold mb-4">Contact Me</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name Field */}
         <div>
-          <label htmlFor="name" className="block text-sm text-white font-medium">
+          <label
+            htmlFor="name"
+            className="block text-sm text-white font-medium"
+          >
             Name
           </label>
           <input
@@ -127,13 +128,18 @@ const ContactForm = () => {
               errors.name ? "border-red-500" : "border-gray-300"
             } rounded`}
             required
-            />
-          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+          />
+          {errors.name && (
+            <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+          )}
         </div>
 
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="block text-sm text-white font-medium">
+          <label
+            htmlFor="email"
+            className="block text-sm text-white font-medium"
+          >
             Email
           </label>
           <input
@@ -147,12 +153,17 @@ const ContactForm = () => {
             } rounded`}
             required
           />
-          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+          )}
         </div>
 
         {/* Message Field */}
         <div>
-          <label htmlFor="message" className="block text-sm text-white font-medium">
+          <label
+            htmlFor="message"
+            className="block text-sm text-white font-medium"
+          >
             Message
           </label>
           <textarea
@@ -164,19 +175,30 @@ const ContactForm = () => {
               errors.message ? "border-red-500" : "border-gray-300"
             } rounded`}
             required
-            />
-          {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+          />
+          {errors.message && (
+            <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+          )}
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
-          className={`bg-[#333a4d] text-white py-2 px-4 rounded ${
-            !isFormValid() ? "opacity-50 cursor-not-allowed" : "hover:bg-primary-dark"
+          className={`bg-[#333a4d] text-white py-2 px-4 rounded flex items-center space-x-2 ${
+            !isFormValid()
+              ? "opacity-50 cursor-not-allowed"
+              : "hover:bg-primary-dark"
           }`}
           disabled={!isFormValid() || loading}
-          >
-          {loading ? "Sending..." : "Submit"}
+        >
+          {loading ? (
+            "Sending..."
+          ) : (
+            <>
+              <AiOutlineSend className="w-5 h-5" /> {/* Send icon */}
+              <span>Send</span>
+            </>
+          )}
         </button>
       </form>
       {/* Status Message */}

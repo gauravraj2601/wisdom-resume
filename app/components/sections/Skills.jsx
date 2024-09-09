@@ -20,11 +20,11 @@ const Skills = () => {
   return (
     <section id='skills' className="mb-12">
       <h2 className="text-2xl font-bold mb-4">Skills</h2>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 ">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3  ">
         {skills.map((skill, index) => (
           <div key={index} className="relative">
             <Tooltip content={skill.tooltip} placement="top" arrow={false} animation="duration-300" trigger="hover" className="tooltip-custom" >
-              <button className="text-white bg-[#333a4d] hover:bg-[#192035] font-medium rounded-lg text-sm px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+              <button className="text-white bg-[#333a4d] hover:bg-[#192035] font-medium rounded-lg text-[12px] md:text-[15px] px-2 md:px-4 py-1.5 md:py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:bg-blue-500 ">
                 {skill.name}
               </button>
             </Tooltip>
