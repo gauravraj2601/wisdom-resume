@@ -26,23 +26,28 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
    - **Custom Validators**: Includes validation rules for required fields, email format, and message length.
   - Real-Time Feedback: Provides immediate feedback to users as they fill out the form, indicating any errors or successful validation.
 
-
+## Tech Stacks Used
+- **Next.js**- A React framework that enables server-side rendering and static site generation, enhancing performance and SEO.
+- **Tailwind CSS**- For styling and responsive design
+- **React Flowbite**- A library of UI components for React, built with Tailwind CSS, providing a set of reusable components and utility classes.
 
 ## Getting Started
+To set up the project locally, follow these steps:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone the Repository**
+   ```bash
+   https://github.com/gauravraj2601/wisdom-resume.git
+2. **Install Dependencies**
+   Make sure you have Node.js installed. Then, run:
+   ```bash
+   npm install
+3. **Run the Application**
+   Start the development server:
+   ```
+   npm run dev
+4. **Visit the Application**
+   Open your browser and go to http://localhost:3000 to see WebPage.
+   
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
