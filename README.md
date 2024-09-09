@@ -15,7 +15,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### Skills
 - **Skills**: Highlight Gaurav's technical skills and areas of expertise, showcasing proficiency in React, Tailwind CSS, and other relevant technologies.
 
-### Portfoli
+### Portfolio
 - **Project Highlights**: A showcase of significant projects I have worked on, including details of the technology used, the problem solved, and the outcomes achieved.
 
 ### Contact
