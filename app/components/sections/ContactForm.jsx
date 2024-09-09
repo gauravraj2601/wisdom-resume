@@ -1,6 +1,5 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-import ScrollAnimation from 'react-animate-on-scroll';
 const ContactForm = () => {
   // Form state
   const [formData, setFormData] = useState({
@@ -108,17 +107,14 @@ const ContactForm = () => {
   };
 
   return (
-      <ScrollAnimation 
-       animateIn="fadeIn" 
-      animateOnce={true} 
-       >
-    <section className="mb-12">
-      <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+  
+    <section className=" bg-[rgb(0,0,0,0.3)] w-[300px] md:w-[490px] m-auto  mt-2 p-3 rounded-[15px]">
+      <h2 className="text-2xl text-white font-bold mb-4">Contact Me</h2>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name Field */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium">
+          <label htmlFor="name" className="block text-sm text-white font-medium">
             Name
           </label>
           <input
@@ -137,7 +133,7 @@ const ContactForm = () => {
 
         {/* Email Field */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium">
+          <label htmlFor="email" className="block text-sm text-white font-medium">
             Email
           </label>
           <input
@@ -156,7 +152,7 @@ const ContactForm = () => {
 
         {/* Message Field */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium">
+          <label htmlFor="message" className="block text-sm text-white font-medium">
             Message
           </label>
           <textarea
@@ -186,7 +182,6 @@ const ContactForm = () => {
       {/* Status Message */}
       {statusMessage && <p className="mt-4 text-green-500">{statusMessage}</p>}
     </section>
-          </ScrollAnimation>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -9,9 +10,10 @@ import "react-vertical-timeline-component/style.min.css";
 import { FaBriefcase } from "react-icons/fa";
 import { BsGithub } from "react-icons/bs";
 import { SiNetlify } from "react-icons/si";
+import { Tooltip } from "flowbite-react";
 
 const Portfolio = () => {
-  
+
   const INRGit = () => {
     window.open("https://github.com/gauravraj2601/INR-Club");
   };
@@ -35,7 +37,7 @@ const Portfolio = () => {
     window.open("https://elctronix-express-k74afyg3e-ganeshgourav.vercel.app/");
   };
 
-      // projects Data
+  // Projects data
   const projects = [
     {
       title: "Electronix Express",
@@ -43,7 +45,7 @@ const Portfolio = () => {
       description:
         "Electronix Express is an e-commerce platform specializing in electronic products. It offers a seamless online shopping experience for electronics enthusiasts.",
       techStack: "HTML | CSS | React | Chakra-UI | Redux",
-      image: "https://user-images.githubusercontent.com/123883332/265188275-20f6e2dc-d103-464b-9bac-74e4f25d38ff.png",
+      image: "https://i.ibb.co/pWjXD3T/Home.png",
       githubLink: electGit,
       deployedLink: electDep,
     },
@@ -68,26 +70,21 @@ const Portfolio = () => {
       deployedLink: INRDep,
     },
   ];
-  
-
 
   return (
     <section id="portfolio" className="mb-12">
       <h2 className="text-2xl font-bold mb-4">Portfolio</h2>
 
-      <VerticalTimeline lineColor={"#2d2d35"} animate={true}>
-        {/* Electronix Express */}
+      <VerticalTimeline lineColor={"#70708f"} animate={true}>
         {projects.map((project, index) => {
-          const githubTooltipId = `tooltip-github-${index}`;
-          const deployedTooltipId = `tooltip-netlify-${index}`;
           return (
             <VerticalTimelineElement
-            visible={true}
+              visible={true}
               key={index}
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-              contentArrowStyle={{ borderRight: "7px solid rgb(33, 150, 243)" }}
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              contentStyle={{ background: "#333a4d", color: "#fff" }}
+              contentArrowStyle={{ borderRight: "7px solid#333a4d" }}
+              iconStyle={{ background: "#333a4d", color: "#fff" }}
               icon={<FaBriefcase />}
             >
               <div className="flex justify-between items-center">
@@ -100,56 +97,39 @@ const Portfolio = () => {
                   </h4>
                 </div>
                 <div className="project-image">
-                  <img src={project.image} alt={project.title} />
+                  <Image width={220} height={150} src={project.image} alt={project.title} />
                 </div>
               </div>
               <p>{project.description}</p>
-              <p><span className="font-bold">Tech-Stack:</span> {project.techStack}</p>
+              <p>
+                <span className="font-bold">Tech-Stack:</span> {project.techStack}
+              </p>
 
-              <div className="project-links">
-                <div className="relative">
+              <div className="flex justify-center space-x-6 mt-2" >
+                <Tooltip content="GitHub Repo" placement="top" arrow={false} animation="duration-300" trigger="hover" className="tooltip-custom"  >
                   <button
-                    data-tooltip-target={githubTooltipId}
                     type="button"
-                    className="project-github-link text-white  hover:bg-blue-400 focus:ring-2 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+                    className="project-github-link text-white hover:bg-blue-400 focus:ring-2 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center"
                     onClick={project.githubLink}
                   >
-                    <BsGithub />
+                    <BsGithub size={25} />
                   </button>
-                  <div
-                    id={githubTooltipId}
-                    role="tooltip"
-                    className="absolute z-10 invisible opacity-0 inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm transition-opacity duration-300"
-                  >
-                    GitHub Repo
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
+                </Tooltip>
 
-                <div className="relative">
+                <Tooltip content="Deployed Link" placement="top" arrow={false} animation="duration-300" trigger="hover" className="tooltip-custom"  >
                   <button
-                    data-tooltip-target={deployedTooltipId}
                     type="button"
-                    className="project-deployed-link text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                    className="project-deployed-link text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg text-sm px-5 py-2.5 text-center"
                     onClick={project.deployedLink}
                   >
-                    <SiNetlify />
+                    <SiNetlify size={20} />
                   </button>
-                  <div
-                    id={deployedTooltipId}
-                    role="tooltip"
-                    className="absolute z-10 invisible opacity-0 inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm transition-opacity duration-300"
-                  >
-                    Deployed Link
-                    <div className="tooltip-arrow" data-popper-arrow></div>
-                  </div>
-                </div>
+                </Tooltip>
               </div>
             </VerticalTimelineElement>
           );
         })}
-
-        </VerticalTimeline>
+      </VerticalTimeline>
     </section>
   );
 };

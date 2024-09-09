@@ -1,8 +1,14 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import profilePic from "../Assets/ProfilePic.png";
 import Image from 'next/image';
-
 const Header = () => {
+
+  const handleClick = () => {
+    window.open("https://drive.google.com/file/d/1TKlkc8LgsflwG44jLtTt4fmGPKtStN8a/view?usp=sharing"
+    );
+    
+  };
+
   const NavigateSection = (e) => {
     e.preventDefault(); // Prevent default anchor behavior
     const sectionId = e.target.getAttribute('href'); // Get the target section's ID
@@ -12,12 +18,12 @@ const Header = () => {
   };
     return (
       <>
-      <nav className='nav '>
+      <nav className='nav pr-[10px] sm:pr-[50px] '>
       <div id="logo">
         <span className="span">{"<"}</span> <h2>Gaurav</h2>{" "}
         <span className="span"> {"/>"}</span>
       </div>
-      <ul className='font-semibold text-[13px] sm:font-bold md:text-[18px] overflow-hidden '>
+      <ul className='w-[95%] sm:w-[85%]  font-semibold text-[10px] sm:font-bold md:text-[18px] overflow-hidden '>
         <li>
           <a href="#about" onClick={NavigateSection}>
             About
@@ -42,8 +48,7 @@ const Header = () => {
           <a
             className="nav-link resume"
             id="resume-link-1"
-            href={"#"}
-            // onClick={handleClick}
+            onClick={handleClick}
             download="Gaurav_Raj_Resume"
           >
             Resume
@@ -88,7 +93,7 @@ const Header = () => {
                 width={200}
                 height={200}
                 className="rounded-full relative top-[-80px] sm:top-[-100px] md:top-[-120px] lg:top-[-140px]"
-                style={{ aspectRatio: "200/200", objectFit: "cover" }}
+                style={{ objectFit: "cover" }}
             />
         </div>
       </>

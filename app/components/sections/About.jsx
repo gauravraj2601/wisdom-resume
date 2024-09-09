@@ -5,7 +5,8 @@ const About = () => {
   return (
         <ScrollAnimation animateIn='bounceInRight' 
         animateOut='bounceOutLeft'
-          >
+        animateOnce={true}
+        >
     <section id="about" className="mb-12 mt-[-140px]">
       <div>
 

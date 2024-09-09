@@ -1,28 +1,21 @@
 
 // components/Footer.jsx
+import { AiOutlineDownload } from 'react-icons/ai'; // Download icon from React Icons
+
 const Footer = ({handleGeneratePDF}) => {
     return (
-      <footer className="bg-primary text-primary-foreground py-6 px-4 md:px-6 flex items-center justify-between">
-        <div>
-          <a href="#" className="hover:underline">Download Resume</a>
-        </div>
-        <div className="flex items-center space-x-4">
-          <a href="#" className="hover:underline">
-            <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 20v-6m0-4V4m8 8H4"/>
-            </svg>
-            123 Main St, Anytown USA
-          </a>
-          <div className="flex items-center space-x-2">
-            <span>&copy; 2024 John Doe</span>
-            <div className="h-5 w-[1px] bg-gray-400"></div>
-            <a href="#" className="hover:underline">Privacy Policy</a>
-            <div className="h-5 w-[1px] bg-gray-400"></div>
-            <a href="#" className="hover:underline">Terms of Service</a>
-          </div>
-        </div>
-        <button onClick={handleGeneratePDF} >        Download Resume as PDF
+      <footer  className="font-semibold text-[10px]">
+        <div className=" fixed bottom-4 right-4 z-10 ">
+        <button
+          className="hover:underline bg-[#333a4d] text-white flex items-center space-x-1 px-1 py-1 rounded"
+          onClick={handleGeneratePDF}
+        >
+          <AiOutlineDownload className="h-5 w-5" /> {/* Download icon */}
+          <span>Resume as PDF</span>
         </button>
+        </div>
+        {/* Google Maps iframe */}
+      
       </footer>
     );
   };
