@@ -8,7 +8,9 @@ import html2canvas from 'html2canvas';
 
 const GauravResumeComp = () => {
     const { toPDF, targetRef } = usePDF({filename: 'Gaurav_Raj_Resume.pdf'});
-
+    const handleDownloadResume = () => {
+        window.open('https://drive.google.com/file/d/1TKlkc8LgsflwG44jLtTt4fmGPKtStN8a/view?usp=drivesdk', '_blank');
+    };
     const generatePDF = () => {
         const element = document.getElementById('pdf-content');
         html2canvas(element, {
@@ -49,7 +51,7 @@ const GauravResumeComp = () => {
     </div>
 <div className='page-break'>
 
-          <Footer handleGeneratePDF={generatePDF} />
+          <Footer handleGeneratePDF={handleDownloadResume} />
 </div>
         </div>
 
